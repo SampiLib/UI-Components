@@ -1,0 +1,44 @@
+@import "../components/common.scss";
+
+comp-text {
+    display: block;
+    color: var(--componentLabelTextColor);
+    user-select: none;
+
+    .anim & {
+        transition: color var(--colorTransitionType) var(--colorTransitionTime);
+    }
+
+    &.READ {
+        filter: var(--readOpacityFilter);
+        pointer-events: none;
+    }
+
+    &.NONE {
+        display: none;
+    }
+}
+
+comp-textvalue {
+    display: flex;
+    flex-direction: column;
+    color: var(--componentLabelTextColor);
+    user-select: none;
+
+    .anim & {
+        transition: color var(--colorTransitionType) var(--colorTransitionTime);
+    }
+
+    &.READ {
+        filter: var(--readOpacityFilter);
+        pointer-events: none;
+    }
+
+    &.NONE {
+        display: none;
+    }
+
+    >div>:first-child {
+        font-size: 0.8em;
+    }
+}
